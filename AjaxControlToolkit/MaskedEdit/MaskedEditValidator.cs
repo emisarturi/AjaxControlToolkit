@@ -715,7 +715,7 @@ namespace AjaxControlToolkit {
                         base.Text = InvalidValueBlurredMessage;
                 }
             }
-            if(!ok) {
+            if(!ok && EnableClientScript) {
                 // set CSS at server for browser with not implement client validator script (FF, others)   
                 //MaskedEditSetCssClass(value,CSS)
                 var script = "MaskedEditSetCssClass(" + ClientID + ",'" + cssError + "');";
